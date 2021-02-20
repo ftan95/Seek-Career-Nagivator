@@ -29,4 +29,8 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  // onSubmit() {
+  //   const form = this.loginForm.value;
+  // }
+
 }
