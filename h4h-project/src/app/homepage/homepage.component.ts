@@ -22,7 +22,7 @@ export class HomepageComponent implements OnInit {
   };
   
   surveyResult: Array<string> = ['Biologist', 'Researcher', 'Historian', 'Astronomist', 'Product Management','SEO Specialist','Web Designer'];
-  careerInterst: Array<string> = ['Web Developer', 'Aerospace Industry', 'Structural Engineer', 'Credit Analyst', 'Recruiter'];
+  careerInterst: Array<string> = ['Web Developer', 'Aerospace Industry', 'Structural Engineer', 'Credit Analyst', 'Recruiter', 'Consulting'];
   isEdit = false;
 
   onFileChanged(event) {
