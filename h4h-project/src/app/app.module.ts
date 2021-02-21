@@ -10,6 +10,8 @@ import {AuthService} from './services/auth.service';
 import {HttpClientModule} from '@angular/common/http';
 import { CategoryComponent } from './category/category.component';
 import { BusinessComponent } from './business/business.component';
+import { FinanceComponent } from './finance/finance.component';
+import { ConsultingComponent } from './consulting/consulting.component';
 
 const routes: Routes = [
   {
@@ -41,6 +43,20 @@ const routes: Routes = [
     }
   },
   {
+    path: 'finance',
+    component: FinanceComponent,
+    data: {
+      title: 'Finance'
+    }
+  },
+  {
+    path: 'consulting',
+    component: ConsultingComponent,
+    data: {
+      title: 'Consulting'
+    }
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
@@ -53,7 +69,9 @@ const routes: Routes = [
     HomeComponent,
     OptionsComponent,
     CategoryComponent,
-    BusinessComponent
+    BusinessComponent,
+    FinanceComponent,
+    ConsultingComponent
   ],
   imports: [
     BrowserModule,
