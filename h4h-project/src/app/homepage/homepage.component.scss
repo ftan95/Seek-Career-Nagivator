@@ -7,9 +7,6 @@
 #title{
     font-size: 40px;
 }
-// #subtitle{
-//     font-size: 32px;
-// }
 .contentblock{
     background-color: white;
     width: 30%;
@@ -25,10 +22,10 @@
     height:60px;
     border-radius: 30px;
     margin: 30px 15%;
+    padding:10px 0;
 }
 .contenttitle{
     font-size: 24px;
-    // text-align: center;
     padding-top: 15px;
 }
 .blockcontent{
@@ -42,8 +39,10 @@
 }
 #profilepic{
     width: 120px;
-    height: 150px;
-    margin-left: -50%;
+    height: 130px;
+    text-align: left;
+    margin-left: -40%;
+    margin-bottom: 10px;
 }
 .scrollblock{
     overflow-y: scroll;
@@ -60,7 +59,20 @@
     color:tomato
 }
 .searchbar{
-    width:80%;
+    width:70%;
     height:40px;
-    margin:auto;
+    margin:0 5%;
+    float:left;
+}
+.hide{
+	display:none;
+}
+.show{
+	display:block;
+}
+#profileTable{
+    width:90%;
+    text-align: left;
+    border: none;
+    margin:20px 10%;
 }

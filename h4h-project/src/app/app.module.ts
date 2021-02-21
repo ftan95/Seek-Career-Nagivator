@@ -110,6 +110,7 @@ const routes: Routes = [
     ActivityComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
