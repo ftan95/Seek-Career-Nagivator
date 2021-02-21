@@ -13,6 +13,8 @@ import { BusinessComponent } from './business/business.component';
 import { FinanceComponent } from './finance/finance.component';
 import { ConsultingComponent } from './consulting/consulting.component';
 import { SignupComponent } from './signup/signup.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { SurveyComponent } from './survey/survey.component';
 
 const routes: Routes = [
   {
@@ -65,6 +67,20 @@ const routes: Routes = [
     }
   },
   {
+    path: 'home',
+    component: HomepageComponent,
+    data: {
+      title: 'Home'
+    }
+  },
+  {
+    path: 'survey',
+    component: SurveyComponent,
+    data: {
+      title: 'Survey'
+    }
+  },
+  {
     path: '',
     redirectTo: 'login',
     pathMatch: 'full'
@@ -80,7 +96,9 @@ const routes: Routes = [
     BusinessComponent,
     FinanceComponent,
     ConsultingComponent,
-    SignupComponent
+    SignupComponent,
+    HomepageComponent,
+    SurveyComponent
   ],
   imports: [
     BrowserModule,

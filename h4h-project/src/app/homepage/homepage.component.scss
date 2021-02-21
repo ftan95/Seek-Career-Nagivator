@@ -1,0 +1,66 @@
+.title{
+    width:600px;
+    text-align: center;
+    margin: auto;
+    margin-top: -30px;
+}
+#title{
+    font-size: 40px;
+}
+// #subtitle{
+//     font-size: 32px;
+// }
+.contentblock{
+    background-color: white;
+    width: 30%;
+    height:500px;
+    border-radius: 30px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align:top;
+}
+#searchblock{
+    background-color: white;
+    width: 70%;
+    height:60px;
+    border-radius: 30px;
+    margin: 30px 15%;
+}
+.contenttitle{
+    font-size: 24px;
+    // text-align: center;
+    padding-top: 15px;
+}
+.blockcontent{
+    font-size: 14px;
+    margin:10px;
+    text-align: left;
+}
+.inarow{
+    margin-bottom: 10px;
+    text-align: center;
+}
+#profilepic{
+    width: 120px;
+    height: 150px;
+    margin-left: -50%;
+}
+.scrollblock{
+    overflow-y: scroll;
+    height:250px;
+    width: 80%;
+    margin: 10%;
+    border:1px solid black;
+    border-radius: 5px;
+}
+.deletebtn{
+    border:0;
+    background-color: white;
+    float:right;
+    color:tomato
+}
+.searchbar{
+    width:80%;
+    height:40px;
+    margin:auto;
+}
