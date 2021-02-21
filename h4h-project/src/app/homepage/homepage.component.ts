@@ -11,6 +11,7 @@ export class HomepageComponent implements OnInit {
   constructor(private readonly route: Router) { }
 
   ngOnInit(): void {
+    console.log(this.user.photo);
   }
 
   user = {
@@ -20,11 +21,18 @@ export class HomepageComponent implements OnInit {
     school:"Santa Clara University",
     major:"Finance"
   };
+  
   // surveyResult: Array<string> = [];
   // careerInterst: Array<string> = [];
   surveyResult: Array<string> = ['Biologist', 'Researcher', 'Historian', 'Astronomist', 'Product Management','SEO Specialist','Web Designer'];
   careerInterst: Array<string> = ['Web Developer', 'Aerospace Industry', 'Structural Engineer', 'Credit Analyst', 'Recruiter'];
   isEdit = false;
+
+  onFileChanged(event) {
+    const file = event.target.files[0];
+    console.log(file);
+    this.user.photo = file
+  }
 
 
   searchCareer() {
@@ -32,6 +40,7 @@ export class HomepageComponent implements OnInit {
   }
   rminterest(i) {
     this.careerInterst.splice(i,1);
+    
   }
   editProfile() {
     this.isEdit = true;

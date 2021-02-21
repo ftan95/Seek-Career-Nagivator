@@ -16,6 +16,7 @@ import { SignupComponent } from './signup/signup.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { SurveyComponent } from './survey/survey.component';
 import { ActivityComponent } from './activity/activity.component';
+import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
   {
@@ -89,6 +90,13 @@ const routes: Routes = [
     }
   },
   {
+    path: 'search',
+    component: SearchComponent,
+    data: {
+      title: 'Search'
+    }
+  },
+  {
     path: '',
     redirectTo: 'login',
     pathMatch: 'full'
@@ -107,7 +115,8 @@ const routes: Routes = [
     SignupComponent,
     HomepageComponent,
     SurveyComponent,
-    ActivityComponent
+    ActivityComponent,
+    SearchComponent
   ],
   imports: [
     FormsModule,
