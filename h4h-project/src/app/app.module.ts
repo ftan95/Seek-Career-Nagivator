@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { OptionsComponent } from './options/options.component';
 import {AuthService} from './services/auth.service';
+import {FieldService} from './services/field.service';
 import {HttpClientModule} from '@angular/common/http';
 import { CategoryComponent } from './category/category.component';
 import { BusinessComponent } from './business/business.component';
@@ -118,7 +119,8 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
   providers: [
-    AuthService
+    AuthService,
+    FieldService
   ],
   bootstrap: [AppComponent]
 })
