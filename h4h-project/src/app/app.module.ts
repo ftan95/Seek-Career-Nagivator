@@ -27,10 +27,17 @@ const routes: Routes = [
     }
   },
   {
-    path: 'explore',
+    path: 'category',
     component: CategoryComponent,
     data: {
-      title: 'Explore'
+      title: 'Category'
+    }
+  },
+  {
+    path: 'business',
+    component: BusinessComponent,
+    data: {
+      title: 'Business'
     }
   },
   {
