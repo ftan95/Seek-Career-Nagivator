@@ -13,4 +13,8 @@ export class ConsultingComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addtolist() {
+    return 0;
+  }
+
 }
