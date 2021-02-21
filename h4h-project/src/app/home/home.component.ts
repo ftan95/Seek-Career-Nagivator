@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
+import {RestService} from '../services/rest.service';
+import {AuthService} from '../services/auth.service';
+import {environment} from 'src/environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +11,11 @@ import {ActivatedRoute, Router} from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  errorMessage: string;
 
   constructor(
+    private readonly rest: RestService,
+    private readonly auth: AuthService,
     private readonly router: Router,
     private readonly route: ActivatedRoute,
     private readonly fb: FormBuilder
@@ -29,8 +35,19 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  // onSubmit() {
-  //   const form = this.loginForm.value;
-  // }
+  onSubmit() {
+    const form = this.loginForm.value;
+    return this.rest.post(environment.apiURL)
+    .then(res => {
+      if (res[0]) {
+        const userId = res[0].id;
+        this.auth.setUserId(userId);
+        this.router.navigate(['/option']);
+      }
+      else {
+        this.errorMessage = "Invalid username or password";
+      }
+    });
+  }
 
 }
