@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
+import {RestService} from '../services/rest.service';
 import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-signup',
@@ -11,7 +13,12 @@ export class SignupComponent implements OnInit {
   signupForm: FormGroup;
   formDisabled: boolean = true;
 
-  constructor(private readonly route: Router) { }
+  constructor(private readonly route: Router,
+    private readonly rest: RestService,
+    private readonly router: Router,
+    ) { 
+    
+  }
 
   ngOnInit(): void {
     this.signupForm = new FormGroup({
@@ -20,6 +27,7 @@ export class SignupComponent implements OnInit {
       'password': new FormControl(null, Validators.required),
       'retype': new FormControl(null, Validators.required)
     });
+    // errorMessage: string;
 
     this.signupForm.valueChanges.subscribe(
       (value) => {
@@ -35,6 +43,17 @@ export class SignupComponent implements OnInit {
 
   onSubmit() {
     console.log(this.signupForm.value);
+    // return this.rest.post('https://h4happ.herokuapp.com/signup', this.signupForm)
+    // .then(res => {
+    //   console.log(res);
+    //   if (res.message == "Success") {
+    //     // const userId = res[0].id;
+    //     // this.auth.setUserId(userId);
+    //     this.router.navigate(['/option']);
+    //   }
+    //   else {
+    //     this.errorMessage = "Invalid username or password";
+    //   }
   }
 
   cancel() {

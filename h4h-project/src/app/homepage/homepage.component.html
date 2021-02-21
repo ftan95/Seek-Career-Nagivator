@@ -16,8 +16,8 @@
     Private Equity or Venture Capital 
     Startups. 
             </p><br>
-            <img [src]="user.photo" id="profilepic"/><br>
-            <input type="file" (change)="onFileChanged($event)" [disabled]="!isEdit" [(ngModel)]="user.photo" style="margin-left: 10%;"/>
+            <img src="{{user.photo}}" id="profilepic"/><br>
+            <input type="file" [disabled]="!isEdit" [(ngModel)]="user.photo" style="margin-left: 10%;"/>
             <table id="profileTable">
                 <tbody>
                   <tr>

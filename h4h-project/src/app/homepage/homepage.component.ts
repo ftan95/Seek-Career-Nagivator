@@ -11,7 +11,6 @@ export class HomepageComponent implements OnInit {
   constructor(private readonly route: Router) { }
 
   ngOnInit(): void {
-    console.log(this.user.photo);
   }
 
   user = {
@@ -29,18 +28,15 @@ export class HomepageComponent implements OnInit {
   isEdit = false;
 
   onFileChanged(event) {
-    const file = event.target.files[0];
-    console.log(file);
-    this.user.photo = file
+    // const file = event.target.files[0];
+    // this.user.photo = file
   }
 
 
   searchCareer() {
-
   }
   rminterest(i) {
     this.careerInterst.splice(i,1);
-    
   }
   editProfile() {
     this.isEdit = true;
