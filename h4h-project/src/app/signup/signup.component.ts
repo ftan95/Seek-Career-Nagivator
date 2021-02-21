@@ -3,7 +3,6 @@ import {FormGroup, FormControl, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {RestService} from '../services/rest.service';
 import {AuthService} from '../services/auth.service';
-import {environment} from 'src/environments/environment';
 
 
 @Component({
