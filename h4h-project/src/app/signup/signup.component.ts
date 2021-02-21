@@ -38,7 +38,7 @@ export class SignupComponent implements OnInit {
   }
 
   cancel() {
-    this.route.navigate(["/home"]);
+    this.route.navigate(["/login"]);
   }
 
 }

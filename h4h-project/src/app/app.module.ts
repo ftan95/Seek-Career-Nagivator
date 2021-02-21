@@ -13,6 +13,8 @@ import { BusinessComponent } from './business/business.component';
 import { FinanceComponent } from './finance/finance.component';
 import { ConsultingComponent } from './consulting/consulting.component';
 import { SignupComponent } from './signup/signup.component';
+import { SurveyComponent } from './survey/survey.component';
+import { ActivityComponent } from './activity/activity.component';
 
 const routes: Routes = [
   {
@@ -34,6 +36,13 @@ const routes: Routes = [
     component: OptionsComponent,
     data: {
       title: 'Options'
+    }
+  },
+  {
+    path: 'survey',
+    component: SurveyComponent,
+    data: {
+      title: 'Survey'
     }
   },
   {
@@ -80,7 +89,9 @@ const routes: Routes = [
     BusinessComponent,
     FinanceComponent,
     ConsultingComponent,
-    SignupComponent
+    SignupComponent,
+    SurveyComponent,
+    ActivityComponent
   ],
   imports: [
     BrowserModule,
