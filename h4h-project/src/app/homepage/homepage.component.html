@@ -51,11 +51,11 @@
             
                 <div class="scrollblock">
                     <ul class="list-group list-group-flush" style="text-align:left;">
-                        <li class="list-group-item" *ngFor="let result of surveyResult"  style="height:40px">{{result}}</li>
+                        <li class="list-group-item" *ngFor="let result of surveyResult; index as i " style="height:40px"><span [class]="topResult(i)">{{result}}</span></li>
                     </ul>
                 </div>
                 <div style="margin:10px 15px; text-align: middle;">
-                    <a routerLink="/survey"><button type="button" class="btn btn-primary btn-sm">Add</button></a>
+                    <a routerLink="/survey"><button type="button" class="btn btn-primary btn-sm">Do Test</button></a>
                     <p style="font-size: 12px; margin-top:10px">Take the Survey again for new results</p>
                 </div>
             </div>
@@ -80,7 +80,7 @@
                     </ul>
                 </div>
                 <div style="margin:10px 15px">
-                    <a routerLink="/category"><button type="button" class="btn btn-primary btn-sm">Add</button></a>
+                    <a routerLink="/category"><button type="button" class="btn btn-primary btn-sm">Explore</button></a>
                     <p style="font-size: 12px; margin-top: 10px;">Explore new careers to add to your list</p>
                 </div>
             </div> 

@@ -22,8 +22,8 @@ export class HomepageComponent implements OnInit {
   };
   // surveyResult: Array<string> = [];
   // careerInterst: Array<string> = [];
-  surveyResult: Array<string> = ['finance', 'coomputer science', 'film', 'math', 'physics','art','medical'];
-  careerInterst: Array<string> = ['finance', 'coomputer science', 'film', 'math', 'physics'];
+  surveyResult: Array<string> = ['Biologist', 'Researcher', 'Historian', 'Astronomist', 'Product Management','SEO Specialist','Web Designer'];
+  careerInterst: Array<string> = ['Web Developer', 'Aerospace Industry', 'Structural Engineer', 'Credit Analyst', 'Recruiter'];
   isEdit = false;
 
 
@@ -38,6 +38,13 @@ export class HomepageComponent implements OnInit {
   }
   sendEdited() {
     this.isEdit = false;
+  }
+  topResult(i) {
+    if (i <= 2){
+      return 'topResult'
+    } else{
+      return''
+    }
   }
 
 }
