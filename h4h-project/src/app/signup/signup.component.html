@@ -1,0 +1,78 @@
+<div>
+    <img src="../../assets/Logo.png" alt="logo" id="logo">
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 form-box">
+            <form [formGroup]="signupForm">
+                <p style="text-align: center;">Register Account</p>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group row justify-content-center">
+                            <div>
+                                <input
+                                type="text"
+                                formControlName="name"
+                                id="name"
+                                class="form-control"
+                                placeholder="Name">
+                                <span *ngIf="!signupForm.get('name').valid && signupForm.get('name').touched"
+                                class="form-text text-muted">Please enter a name</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row justify-content-center">
+                            <div>
+                                <input
+                                type="text"
+                                formControlName="email"
+                                id="email"
+                                class="form-control"
+                                placeholder="Email">
+                                <span *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched"
+                                class="form-text text-muted">Please enter a valid email</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row justify-content-center">
+                            <div>
+                                <input
+                                type="password"
+                                formControlName="password"
+                                class="form-control"
+                                placeholder="Password">
+                                <span *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched"
+                                class="form-text text-muted">Please enter a password</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row justify-content-center">
+                            <div>
+                                <input
+                                type="password"
+                                formControlName="retype"
+                                class="form-control"
+                                placeholder="Retype Password">
+                                <span *ngIf="!signupForm.get('retype').valid && signupForm.get('retype').touched"
+                                class="form-text text-muted">Please retype password</span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mb-3">
+                    <button class="btn btn-primary" type="submit" (click)="onSubmit()" 
+                    [disabled]="formDisabled || !signupForm.get('name').valid || !signupForm.get('email').valid"
+                    routerLink="/home">
+                        Sign up
+                    </button>
+                    <button class="btn btn-primary" (click)="cancel()">Cancel</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>

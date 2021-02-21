@@ -14,7 +14,7 @@ export class RestService {
         });
     }
 
-    // buildOptions(): HttpHeaders {
+    // buildOptions: HttpHeaders {
     //     return new HttpHeaders({
     //         Accept: 'application/json'
     //     })

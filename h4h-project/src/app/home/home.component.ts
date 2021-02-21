@@ -40,6 +40,7 @@ export class HomeComponent implements OnInit {
     return this.rest.post(environment.apiURL)
     .then(res => {
       if (res[0]) {
+        console.log(res[0]);
         const userId = res[0].id;
         this.auth.setUserId(userId);
         this.router.navigate(['/option']);

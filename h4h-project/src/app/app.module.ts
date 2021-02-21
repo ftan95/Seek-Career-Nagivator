@@ -12,6 +12,7 @@ import { CategoryComponent } from './category/category.component';
 import { BusinessComponent } from './business/business.component';
 import { FinanceComponent } from './finance/finance.component';
 import { ConsultingComponent } from './consulting/consulting.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,13 @@ const routes: Routes = [
     component: HomeComponent,
     data: {
       title: 'Home Page'
+    }
+  },
+  {
+    path: 'signup',
+    component: SignupComponent,
+    data: {
+      title: 'Sign up page'
     }
   },
   {
@@ -71,7 +79,8 @@ const routes: Routes = [
     CategoryComponent,
     BusinessComponent,
     FinanceComponent,
-    ConsultingComponent
+    ConsultingComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
