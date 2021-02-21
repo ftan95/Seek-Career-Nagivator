@@ -37,12 +37,12 @@ export class HomeComponent implements OnInit {
 
   onSubmit() {
     const form = this.loginForm.value;
-    return this.rest.post(environment.apiURL)
+    return this.rest.post(environment.apiURL, form.user, form.password)
     .then(res => {
-      if (res[0]) {
-        console.log(res[0]);
-        const userId = res[0].id;
-        this.auth.setUserId(userId);
+      console.log(res);
+      if (res.message == "Success") {
+        // const userId = res[0].id;
+        // this.auth.setUserId(userId);
         this.router.navigate(['/option']);
       }
       else {

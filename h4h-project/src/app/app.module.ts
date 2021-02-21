@@ -16,10 +16,10 @@ import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: 'login',
     component: HomeComponent,
     data: {
-      title: 'Home Page'
+      title: 'login Page'
     }
   },
   {
@@ -66,7 +66,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   }
 ]
