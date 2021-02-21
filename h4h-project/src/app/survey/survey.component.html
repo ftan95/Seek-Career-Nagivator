@@ -1,15 +1,15 @@
 <div style="text-align: center;"></div>
 <div style="display:inline;">
     <img src="../../assets/Logo.png" width="130" height="100">
-    <img src="../../assets/home.png" width="50" height="50" style="float:right; margin:25px">
+    <a routerLink="/home"><img src="../../assets/home.png" width="50" height="50" style="float:right; margin:25px"></a>
     <div class="title">
         <p id="title">Career Exploration Survey</p>
     </div>
 </div>
 <div class="container">
-    <form>
+    <form id="testarea">
         <app-activity *ngFor="let act of activities" [act]='act'></app-activity>
-
+        
         <div class="row justify-content-center mb-3">
             <button class="btn btn-primary" type="submit" (click)="onSubmit()">
                 Submit

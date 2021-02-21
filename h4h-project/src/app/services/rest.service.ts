@@ -7,8 +7,8 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 export class RestService {
     constructor(private readonly http: HttpClient) {}
 
-    post(url: string, user: string, password: string): Promise<any> {
-        return this.http.post(url, `{"username": "${user}","password": "${password}"}`).toPromise()
+    post(url: string, form: string): Promise<any> {
+        return this.http.post(url, form).toPromise()
         .catch(err => {
             console.error(err);
         });

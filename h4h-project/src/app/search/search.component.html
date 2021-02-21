@@ -1,0 +1,17 @@
+<html>
+    <div style="display:inline;">
+        <img src="../../assets/Logo.png" width="130" height="100">
+        <a routerLink="/home"><img src="../../assets/home.png" width="50" height="50" style="float:right; margin:25px"></a>
+        <div class="title">
+            <p id="title">Search for New Career</p>
+        </div>
+    </div>
+    <div id="searchblock">
+        <p id="searchTitle">Search for a career</p>
+        <input class="form-control searchbar" type="text" placeholder="Search for a career" />
+        <span><button type="button" class="btn btn-primary" (click)="searchCareer()">Search</button></span>
+    </div>
+    <div style="text-align: center; margin:20px 0;">
+        <a routerLink="/option"><button type="button" class="btn btn-light">Back</button></a>
+    </div>
+</html>
