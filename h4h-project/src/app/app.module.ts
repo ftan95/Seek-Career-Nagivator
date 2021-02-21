@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { OptionsComponent } from './options/options.component';
 import {AuthService} from './services/auth.service';
 import {HttpClientModule} from '@angular/common/http';
+import { CategoryComponent } from './category/category.component';
+import { BusinessComponent } from './business/business.component';
 
 const routes: Routes = [
   {
@@ -25,6 +27,13 @@ const routes: Routes = [
     }
   },
   {
+    path: 'explore',
+    component: CategoryComponent,
+    data: {
+      title: 'Explore'
+    }
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
@@ -35,7 +44,9 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    OptionsComponent
+    OptionsComponent,
+    CategoryComponent,
+    BusinessComponent
   ],
   imports: [
     BrowserModule,
