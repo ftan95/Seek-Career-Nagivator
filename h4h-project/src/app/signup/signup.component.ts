@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
-import {RestService} from '../services/rest.service';
 import {Router} from '@angular/router';
+import {RestService} from '../services/rest.service';
+import {AuthService} from '../services/auth.service';
+import {environment} from 'src/environments/environment';
 
 
 @Component({
@@ -9,16 +11,18 @@ import {Router} from '@angular/router';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.scss']
 })
+
 export class SignupComponent implements OnInit {
   signupForm: FormGroup;
   formDisabled: boolean = true;
+  errorMessage: string;
 
-  constructor(private readonly route: Router,
+  constructor(
     private readonly rest: RestService,
-    private readonly router: Router,
-    ) { 
+    private readonly auth: AuthService,
+    private readonly router: Router) {
     
-  }
+   }
 
   ngOnInit(): void {
     this.signupForm = new FormGroup({
@@ -27,7 +31,7 @@ export class SignupComponent implements OnInit {
       'password': new FormControl(null, Validators.required),
       'retype': new FormControl(null, Validators.required)
     });
-    // errorMessage: string;
+
 
     this.signupForm.valueChanges.subscribe(
       (value) => {
@@ -41,23 +45,27 @@ export class SignupComponent implements OnInit {
     );
   }
 
-  onSubmit() {
+  async onSubmit() {
     console.log(this.signupForm.value);
-    // return this.rest.post('https://h4happ.herokuapp.com/signup', this.signupForm)
-    // .then(res => {
-    //   console.log(res);
-    //   if (res.message == "Success") {
-    //     // const userId = res[0].id;
-    //     // this.auth.setUserId(userId);
-    //     this.router.navigate(['/option']);
-    //   }
-    //   else {
-    //     this.errorMessage = "Invalid username or password";
-    //   }
+    const form = this.signupForm.value;
+    let data = `{"name": "${form.user}","password": "${form.password}","email": "${form.email}"}`
+    return this.rest.post("https://h4happ.herokuapp.com/signup", form)
+    .then(res => {
+      console.log(res);
+      if (res.message == "Success") {
+        // const userId = res[0].id;
+        // this.auth.setUserId(userId);
+        this.router.navigate(['/option']);
+      }
+      else {
+        this.errorMessage = "Invalid username or password";
+      }
+    });
+    
   }
 
   cancel() {
-    this.route.navigate(["/login"]);
+    this.router.navigate(["/login"]);
   }
 
 }
