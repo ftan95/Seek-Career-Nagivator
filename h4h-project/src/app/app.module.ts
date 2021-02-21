@@ -15,6 +15,7 @@ import { ConsultingComponent } from './consulting/consulting.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { SurveyComponent } from './survey/survey.component';
+import { ActivityComponent } from './activity/activity.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,13 @@ const routes: Routes = [
     component: OptionsComponent,
     data: {
       title: 'Options'
+    }
+  },
+  {
+    path: 'survey',
+    component: SurveyComponent,
+    data: {
+      title: 'Survey'
     }
   },
   {
@@ -98,7 +106,8 @@ const routes: Routes = [
     ConsultingComponent,
     SignupComponent,
     HomepageComponent,
-    SurveyComponent
+    SurveyComponent,
+    ActivityComponent
   ],
   imports: [
     BrowserModule,
