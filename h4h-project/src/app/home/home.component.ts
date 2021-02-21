@@ -37,7 +37,8 @@ export class HomeComponent implements OnInit {
 
   onSubmit() {
     const form = this.loginForm.value;
-    return this.rest.post(environment.apiURL, form.user, form.password)
+    let data = `{"username": "${form.user}","password": "${form.password}"}`
+    return this.rest.post(environment.apiURL, data)
     .then(res => {
       console.log(res);
       if (res.message == "Success") {

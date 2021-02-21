@@ -20,15 +20,17 @@ export class HomepageComponent implements OnInit {
     school:"Santa Clara University",
     major:"Finance"
   };
-  // surveyResult: Array<string> = [];
-  // careerInterst: Array<string> = [];
+  
   surveyResult: Array<string> = ['Biologist', 'Researcher', 'Historian', 'Astronomist', 'Product Management','SEO Specialist','Web Designer'];
   careerInterst: Array<string> = ['Web Developer', 'Aerospace Industry', 'Structural Engineer', 'Credit Analyst', 'Recruiter'];
   isEdit = false;
 
+  onFileChanged(event) {
+    
+  }
+
 
   searchCareer() {
-
   }
   rminterest(i) {
     this.careerInterst.splice(i,1);
@@ -42,7 +44,7 @@ export class HomepageComponent implements OnInit {
   topResult(i) {
     if (i <= 2){
       return 'topResult'
-    } else{
+    } else {
       return''
     }
   }
