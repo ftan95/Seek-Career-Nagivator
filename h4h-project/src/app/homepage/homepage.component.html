@@ -1,0 +1,65 @@
+<html>
+    <div style="display:inline;">
+        <img src="../../assets/Logo.png" width="130" height="100">
+        <div class="title">
+            <p id="title">Home Page</p>
+        </div>
+    </div>
+    <div id="searchblock">
+        <input class="form-control searchbar" type="text" placeholder="Search for a career" >
+    </div>
+    <div class="inarow">
+        <div class="contentblock" style="word-break:break-all">
+            <p class="contenttitle">My Profile</p>
+            <p class="blockcontent">Corporations: Operations Management, Product Management, Strategy, etc.
+    Private Equity or Venture Capital 
+    Startups. 
+            </p><br>
+            <div>
+                <img src={{user.photo}} id="profilepic" />
+            </div>
+            <div style="text-align: left; margin: 10px 20px;">
+                <p>Name: <input type="text" required="required" :readonly="isEdit? false:true" />{{name}}</p>
+                <p>Email: {{email}}</p>  
+                <p>School: {{school}}</p>
+                <p>Major: {{major}}</p>
+            </div>
+            <button type="button" class="btn btn-primary" >Edit</button>
+            
+        </div>
+        <div class="contentblock">
+            <p class="contenttitle">Career Survey</p>
+            <p class="blockcontent">
+                Based on your survey responses, the following careers that are best suited for you are:
+            </p>
+            <div class="scrollblock">
+                <ul class="list-group list-group-flush" style="text-align:left;">
+                    <li class="list-group-item" *ngFor="let result of surveyResult"  style="height:40px">{{result}}</li>
+                </ul>
+            </div>
+            <div style="margin:10px 15px; text-align: middle;">
+                <a routerLink="/survey"><button type="button" class="btn btn-primary btn-sm">Add</button></a>
+                <p style="font-size: 12px; margin-top:10px">Take the Survey again for new results</p>
+            </div>
+
+        </div>
+        <div class="contentblock">
+            <p class="contenttitle">My Careers of Interest</p>
+            <p class="blockcontent">
+                Listed below are the career options that you have added to your list 
+            </p>
+            <div class="scrollblock">
+                <ul class="list-group list-group-flush" style="text-align:left;">
+                    <li class="list-group-item" *ngFor="let interest of careerInterst" style="height:40px">{{interest}}
+                        <button class="deletebtn">x</button>
+                    </li>
+                </ul>
+            </div>
+            <div style="margin:10px 15px">
+                <a routerLink="/category"><button type="button" class="btn btn-primary btn-sm">Add</button></a>
+                <p style="font-size: 12px; margin-top: 10px;">Explore new careers to add to your list</p>
+            </div>
+        </div>
+    </div>
+
+</html>

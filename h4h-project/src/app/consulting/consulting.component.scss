@@ -1,0 +1,42 @@
+.title{
+    width:600px;
+    text-align: center;
+    margin: auto;
+    margin-top: -30px;
+}
+#title{
+    font-size: 40px;
+}
+#subtitle{
+    font-size: 32px;
+}
+.contentblock{
+    background-color: white;
+    width: 40%;
+    height:180px;
+    border-radius: 30px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align:top;
+}
+.contenttitle{
+    font-size: 24px;
+    padding-top: 15px;
+}
+.blockcontent{
+    font-size: 16px;
+    margin:10px;
+    text-align: left;
+}
+.inarow{
+    margin-bottom: 10px;
+    text-align: center;
+}
+.videoblock{
+    width: 28%;
+    height: 180px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    display: inline-block;
+    vertical-align:top;
+}
