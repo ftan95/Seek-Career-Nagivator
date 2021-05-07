@@ -1,96 +1,137 @@
 <html>
-    <div style="display:inline;">
-        <img src="../../assets/Logo.png" width="130" height="100">
-        <div class="title">
-            <p id="title">Home Page</p>
-        </div>
-    </div>
-    <div id="searchblock">
+    <!-- <div id="searchblock">
         <input class="form-control searchbar" type="text" placeholder="Search for a career" />
         <span><button type="button" class="btn btn-primary" (click)="searchCareer()">Search</button></span>
+    </div> -->
+    <div style="display:inline;">
+        <img src="../../assets/Logo.png" width="130" height="100">
     </div>
-    <div class="inarow">
-        <div class="contentblock" style="word-break:break-all">
-            <p class="contenttitle">My Profile</p>
-            <p class="blockcontent">Corporations: Operations Management, Product Management, Strategy, etc.
-    Private Equity or Venture Capital 
-    Startups. 
-            </p><br>
-            <img src="{{user.photo}}" id="profilepic"/><br>
-            <input type="file" [disabled]="!isEdit" [(ngModel)]="user.photo" style="margin-left: 10%;"/>
-            <table id="profileTable">
-                <tbody>
-                  <tr>
-                    <td width="20%">Name: </td>
-                    <td width="70%"><input type="text" required="required" [readonly]="!isEdit" [(ngModel)]="user.name" /></td>
-                  </tr>
-                  <tr>
-                    <td>Email: </td>
-                    <td><input type="text" required="required" [readonly]="!isEdit" [(ngModel)]="user.email"/></td>
-                  </tr>
-                  <tr>
-                    <td>School: </td>
-                    <td><input type="text" required="required" [readonly]="!isEdit" [(ngModel)]="user.school"/></td>
-                  </tr>
-                  <tr>
-                    <td>Major: </td>
-                    <td><input type="text" required="required" [readonly]="!isEdit" [(ngModel)]="user.major"/></td>
-                  </tr>
-                </tbody>
-              </table>
-            <span [class]="isEdit? 'hide':'show'"><button type="button" class="btn btn-secondary" (click)="editProfile()">Edit</button></span>
-            <span [class]="isEdit? 'show':'hide'"><button type="button" class="btn btn-primary" (click)="sendEdited()">Submit</button></span>
-        </div>
-
-        <div class="contentblock">
-            <p class="contenttitle">Career Survey</p>
-            <div [class]="surveyResult.length===0? 'hide':'show'">
-                <p class="blockcontent">
-                    Based on your survey responses, the following careers that are best suited for you are:
-                </p>
-            
-                <div class="scrollblock">
-                    <ul class="list-group list-group-flush" style="text-align:left;">
-                        <li class="list-group-item" *ngFor="let result of surveyResult; index as i " style="height:40px"><span [class]="topResult(i)">{{result}}</span></li>
-                    </ul>
+    NavBar goes here
+    <div class="row">
+        <div class="col">
+            <div class="profileBlock" style="word-break:break-all">
+                <img src="{{user.photo}}" id="profilepic"/><br>
+                <div class="row">
+                    <div class="col">
+                        <p class="contenttitle">John Smith</p>
+                    </div>
+                    <div class="col">
+                        <span [class]="isEdit? 'hide':'show'">
+                            <button type="button" class="btn btn-secondary" (click)="editProfile()">Edit</button>
+                        </span>
+                        <span [class]="isEdit? 'show':'hide'">
+                            <button type="button" class="btn btn-primary" (click)="sendEdited()">Submit</button>
+                        </span>
+                    </div>
                 </div>
-                <div style="margin:10px 15px; text-align: middle;">
-                    <a routerLink="/survey"><button type="button" class="btn btn-primary btn-sm">Do Test</button></a>
-                    <p style="font-size: 12px; margin-top:10px">Take the Survey again for new results</p>
+                <!-- <p class="blockcontent">Corporations: Operations Management, Product Management, Strategy, etc.
+                    Private Equity or Venture Capital 
+                    Startups. 
+                </p><br> -->
+                <!-- <input type="file" [disabled]="!isEdit" [(ngModel)]="user.photo" style="margin-left: 10%;"/> -->
+                <table id="profileTable">
+                    <tbody>
+                      <!-- <tr>
+                        <td width="20%">Name: </td>
+                        <td width="70%"><input type="text" required="required" [readonly]="!isEdit" [(ngModel)]="user.name" /></td>
+                      </tr> -->
+                      <tr>
+                        <img src="https://www.maricopa-sbdc.com/wp-content/uploads/2020/11/image-coming-soon-placeholder.png"
+                        alt="icon" width="50" height="50">
+                      </tr>
+                      <tr>
+                        <!-- <td>Email: </td> -->
+                        <td><input class="profileInfo" type="text" required="required" [readonly]="!isEdit" [(ngModel)]="user.email"/></td>
+                      </tr>
+                      <br>
+                      <tr>
+                        <img src="https://www.maricopa-sbdc.com/wp-content/uploads/2020/11/image-coming-soon-placeholder.png"
+                        alt="icon" width="50" height="50">
+                      </tr>
+                      <tr>
+                        <!-- <td>School: </td> -->
+                        <td><input class="profileInfo" type="text" required="required" [readonly]="!isEdit" [(ngModel)]="user.school"/></td>
+                      </tr>
+                      <br>
+                      <tr>
+                        <img src="https://www.maricopa-sbdc.com/wp-content/uploads/2020/11/image-coming-soon-placeholder.png"
+                        alt="icon" width="50" height="50">
+                      </tr>
+                      <tr>
+                        <!-- <td>Major: </td> -->
+                        <td><input class="profileInfo" type="text" required="required" [readonly]="!isEdit" [(ngModel)]="user.major"/></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+        <div class="col-7">
+            <div class="inarow">
+                <div style="display:inline;">
+                    <div class="title">
+                        <p id="title">Profile</p>
+                    </div>
+                </div>
+                <div class="contentblock">
+                    <p class="contenttitle">Career Survey</p>
+                    <div [class]="surveyResult.length===0? 'hide':'show'">
+                        <p class="blockcontent">
+                            Based on your survey responses, the following careers that are best suited for you are:
+                        </p>
+                    
+                        <div class="scrollblock">
+                            <ul class="list-group list-group-flush" style="text-align:left;">
+                                <li class="list-group-item" *ngFor="let result of surveyResult; index as i " style="height:40px"><span [class]="topResult(i)">{{result}}</span></li>
+                            </ul>
+                        </div>
+                        <div class="row options">
+                            <div class="col-md-6" style="text-align: left;">
+                                <p style="font-size: 1.15vw;">Take the Survey again for new results</p>
+                            </div>
+                            <div class="col-md-6" style="text-align: center;">
+                                <a routerLink="/survey"><button type="button" class="btn btn-primary btn-sm">Do Test</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div [class]="surveyResult.length===0? 'show':'hide'">
+                        <div style="padding:60px 30px">
+                            <a routerLink="/survey"><img src="../../assets/add icon.png" width="200px" height="200px"/></a>
+                        </div>
+                        <p style="font-size: 14px; margin:10px 20px;">You have not taken the career survey. Click on the icon above to take the career survey and be recommended various careers to explore.</p>
+                    </div>      
+                </div>
+                <div class="contentblock">
+                    <p class="contenttitle">My Careers of Interest</p>
+                    <div [class]="careerInterst.length===0? 'hide':'show'">
+                        <p class="blockcontent">
+                            Listed below are the career options that you have added to your list 
+                        </p>
+                        <div class="scrollblock">
+                            <ul class="list-group list-group-flush" style="text-align:left;">
+                                <li class="list-group-item" *ngFor="let interest of careerInterst; index as i " style="height:40px">{{interest}}
+                                    <button class="deletebtn" (click)="rminterest(i)">x</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row options">
+                            <div class="col-md-6" style="text-align: left;">
+                                <p style="font-size: 1.15vw;">Explore new careers to add to your list</p>
+                            </div>
+                            <div class="col-md-6" style="text-align: center;">
+                                <a routerLink="/category"><button type="button" class="btn btn-primary btn-sm">Explore</button></a>
+                            </div>
+                        </div>
+                    </div> 
+                    <div [class]="careerInterst.length===0? 'show':'hide'">
+                        <div style="padding:60px 30px">
+                            <a routerLink="/category"><img src="../../assets/add icon.png" width="200px" height="200px" /></a>
+                        </div>
+                        <p style="font-size: 14px; margin:10px 20px;">You have not added any careers to your list. Click on the icon above to explore careers.</p>
+                    </div>  
                 </div>
             </div>
-            <div [class]="surveyResult.length===0? 'show':'hide'">
-                <div style="padding:60px 30px">
-                    <a routerLink="/survey"><img src="../../assets/add icon.png" width="200px" height="200px"/></a>
-                </div>
-                <p style="font-size: 14px; margin:10px 20px;">You have not taken the career survey. Click on the icon above to take the career survey and be recommended various careers to explore.</p>
-            </div>      
-        </div>
-        <div class="contentblock">
-            <p class="contenttitle">My Careers of Interest</p>
-            <div [class]="careerInterst.length===0? 'hide':'show'">
-                <p class="blockcontent">
-                    Listed below are the career options that you have added to your list 
-                </p>
-                <div class="scrollblock">
-                    <ul class="list-group list-group-flush" style="text-align:left;">
-                        <li class="list-group-item" *ngFor="let interest of careerInterst; index as i " style="height:40px">{{interest}}
-                            <button class="deletebtn" (click)="rminterest(i)">x</button>
-                        </li>
-                    </ul>
-                </div>
-                <div style="margin:10px 15px">
-                    <a routerLink="/category"><button type="button" class="btn btn-primary btn-sm">Explore</button></a>
-                    <p style="font-size: 12px; margin-top: 10px;">Explore new careers to add to your list</p>
-                </div>
-            </div> 
-            <div [class]="careerInterst.length===0? 'show':'hide'">
-                <div style="padding:60px 30px">
-                    <a routerLink="/category"><img src="../../assets/add icon.png" width="200px" height="200px" /></a>
-                </div>
-                <p style="font-size: 14px; margin:10px 20px;">You have not added any careers to your list. Click on the icon above to explore careers.</p>
-            </div>  
         </div>
     </div>
+   
 
 </html>
