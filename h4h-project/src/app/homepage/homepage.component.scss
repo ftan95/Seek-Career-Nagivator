@@ -5,16 +5,30 @@
     margin-top: -30px;
 }
 #title{
-    font-size: 40px;
+    font-size: 5vw;
+    color: white;
 }
+.profileBlock {
+    background-color: rgb(203, 20, 228);
+    // width: 90%;
+    height: 700px;
+    border-radius: 0px 20px 20px 0px;
+    // margin-right: 10px;
+    // display: inline-block;
+    // vertical-align:top;
+    border: 2px solid rgba(35, 110, 165, 1);
+}
+
 .contentblock{
     background-color: white;
-    width: 30%;
-    height:500px;
+    width: 48%;
+    height:600px;
     border-radius: 30px;
     margin-right: 10px;
     display: inline-block;
     vertical-align:top;
+    border: 2px solid rgba(35, 110, 165, 1);
+    margin-top: 20px;
 }
 #searchblock{
     background-color: white;
@@ -27,9 +41,10 @@
 .contenttitle{
     font-size: 24px;
     padding-top: 15px;
+    text-align: center;
 }
 .blockcontent{
-    font-size: 14px;
+    font-size: 20px;
     margin:10px;
     text-align: left;
     height:40px;
@@ -39,17 +54,17 @@
     text-align: center;
 }
 #profilepic{
-    width: 120px;
-    height: 130px;
-    text-align: left;
-    margin-left: -40%;
-    margin-bottom: 10px;
+    width: 43%;
+    margin-left: 17%;
+    margin-bottom: 20px;
+    margin-top: 40px;
 }
 .scrollblock{
     overflow-y: scroll;
     height:250px;
     width: 80%;
     margin: 10%;
+    margin-top: 55px;
     border:1px solid black;
     border-radius: 5px;
 }
@@ -83,4 +98,14 @@
     padding:3px;
     font-size: 18px;
     font-style:oblique;
+}
+
+.profileInfo {
+    width: 80%;
+    font-size: 1.7vw;
+}
+
+.options {
+    margin-left: 8%; 
+    margin-top: 50px;
 }

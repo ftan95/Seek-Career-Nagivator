@@ -3,14 +3,14 @@
 </div>
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-12 col-md-8 form-box">
+        <div class="col-12 col-md-5 form-box">
             <form [formGroup] = "loginForm">
                 <div class="row">
                     <div class="col">
                         <p style="text-align: center; color: red;" *ngIf="errorMessage">{{ errorMessage }}</p>
                         <div class="form-group row justify-content-center">
-                            <div>
-                                <img src="../../assets/username.png" alt="user" id="user">
+                            <div class="userpass">
+                                <img src="../../assets/username.png" alt="user" id="user" style="margin-left: 22%;">
                             </div>
                             <div>
                                 <input
@@ -22,8 +22,8 @@
                         </div>
 
                         <div class="form-group row justify-content-center">
-                            <div>
-                                <img src="../../assets/password.png" alt="pass" id="pass">
+                            <div class="userpass">
+                                <img src="../../assets/password.png" alt="pass" id="pass" style="margin-left: 22%;">
                             </div>
                             <div>
                                 <input
@@ -45,8 +45,8 @@
                 </div>
 
                 <div class="row justify-content-center mb-3">
-                    <button class="btn btn-primary" type="submit" (click)="onSubmit()">
-                        Log In
+                    <button class="btn btn-primary login" type="submit" (click)="onSubmit()">
+                        LOG IN
                     </button>
                 </div>
 

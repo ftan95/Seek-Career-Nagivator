@@ -11,13 +11,27 @@
 }
 
 input {
-    border: transparent;
-    border-bottom: 1px solid #74baf5;
-    // width: 300px;
+    border: 1px solid black;
+    border-radius: 0px 10px 10px 0px;
 }
 
 #logo {
     width: 50%;
     display: block;
     margin: auto;
+}
+
+.userpass {
+    background-color: rgba(35, 110, 165, 1);
+    border-radius: 10px 0px 0px 10px;
+    width: 15%;
+}
+
+.login {
+    width: 215px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: rgba(35, 110, 165, 1);
 }
