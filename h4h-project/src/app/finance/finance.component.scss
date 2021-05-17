@@ -1,11 +1,182 @@
-.title{
-    width:600px;
-    text-align: center;
-    margin: auto;
-    margin-top: -30px;
+.finance-label{
+    width: 1200px;
+    height: 210px;
+    background-color: white;
+    border-top: 10px solid #236FA6;
+    border-left: 25px solid #236FA6;
+    border-bottom: 10px solid #236FA6;
+    z-index: 2;
 }
+.arrow-right{
+    margin-top: 10px;
+    width: 0;
+    height: 0;
+    border-top: 95px solid transparent;
+    border-bottom: 95px solid transparent;
+    border-left: 95px solid white;
+    z-index: 2;
+}
+//arrow outline positions are hardcoded - need to be responsive
+#arrow-outline-cfa{
+    width:0;
+    height:0;
+    border-top: 108px solid transparent;
+    border-bottom: 108px solid transparent;
+    border-left: 108px solid #236FA6;
+    position: absolute;
+    z-index: 1;
+    top: 318px;
+    left: 1310px;
+}
+#arrow-outline-ca{
+    width:0;
+    height:0;
+    border-top: 108px solid transparent;
+    border-bottom: 108px solid transparent;
+    border-left: 108px solid #236FA6;
+    position: absolute;
+    z-index: 1;
+    top: 600px;
+    left: 1310px;
+}
+#arrow-outline-era{
+    width:0;
+    height:0;
+    border-top: 108px solid transparent;
+    border-bottom: 108px solid transparent;
+    border-left: 108px solid #236FA6;
+    position: absolute;
+    z-index: 1;
+    top: 882px;
+    left: 1310px;
+}
+#arrow-outline-fp{
+    width:0;
+    height:0;
+    border-top: 108px solid transparent;
+    border-bottom: 108px solid transparent;
+    border-left: 108px solid #236FA6;
+    position: absolute;
+    z-index: 1;
+    top: 1164px;
+    left: 1310px;
+}
+#arrow-outline-iba{
+    width:0;
+    height:0;
+    border-top: 108px solid transparent;
+    border-bottom: 108px solid transparent;
+    border-left: 108px solid #236FA6;
+    position: absolute;
+    z-index: 1;
+    top: 1446px;
+    left: 1310px;
+}
+#arrow-outline-ia{
+    width:0;
+    height:0;
+    border-top: 108px solid transparent;
+    border-bottom: 108px solid transparent;
+    border-left: 108px solid #236FA6;
+    position: absolute;
+    z-index: 1;
+    top: 1728px;
+    left: 1310px;
+}
+#arrow-outline-pm{
+    width:0;
+    height:0;
+    border-top: 108px solid transparent;
+    border-bottom: 108px solid transparent;
+    border-left: 108px solid #236FA6;
+    position: absolute;
+    z-index: 1;
+    top: 2010px;
+    left: 1310px;
+}
+#arrow-outline-pea{
+    width:0;
+    height:0;
+    border-top: 108px solid transparent;
+    border-bottom: 108px solid transparent;
+    border-left: 108px solid #236FA6;
+    position: absolute;
+    z-index: 1;
+    top: 2292px;
+    left: 1310px;
+}
+#arrow-outline-rea{
+    width:0;
+    height:0;
+    border-top: 108px solid transparent;
+    border-bottom: 108px solid transparent;
+    border-left: 108px solid #236FA6;
+    position: absolute;
+    z-index: 1;
+    top: 2574px;
+    left: 1310px;
+}
+#arrow-outline-sa{
+    width:0;
+    height:0;
+    border-top: 108px solid transparent;
+    border-bottom: 108px solid transparent;
+    border-left: 108px solid #236FA6;
+    position: absolute;
+    z-index: 1;
+    top: 2856px;
+    left: 1310px;
+}
+#arrow-outline-vca{
+    width:0;
+    height:0;
+    border-top: 108px solid transparent;
+    border-bottom: 108px solid transparent;
+    border-left: 108px solid #236FA6;
+    position: absolute;
+    z-index: 1;
+    top: 3138px;
+    left: 1310px;
+}
+.finance-label-image{
+    border-right: 5px solid #E3742C;
+}
+.finance-label-title{
+    padding-left: 8%;
+    font-family: 'Open Sans', sans-serif;
+    color: #414141;
+    font-size: 48px;
+}
+body{
+    background-color: #154d76;
+    overflow-x: hidden;
+}
+.nav-item{
+    padding-left: 10%;
+    padding-right: 10%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+}
+/*
+.navLogin{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.loginbtn{
+    padding-left: 50%;
+    padding-right: 50%;
+}
+*/
+.title-box{
+    background-color: white;
+}
+
 #title{
-    font-size: 40px;
+    font-size: 96px;
+    color: #154d76;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
 }
 .contentblock{
     background-color: white;
